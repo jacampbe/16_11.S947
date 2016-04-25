@@ -30,14 +30,14 @@ var width = 960,
 
 // Albers
 var projectionAlbers = d3.geo.albers()
-    .scale( 5000 )
+    .scale( 500 )
     .rotate( [71.057,0] )
     .center( [0, 42.313] )
     .translate( [width/2,height/2] );
 
 // Mercator
 var projectionMerc = d3.geo.mercator()
-    .scale( 5000 )
+    .scale( 500 )
     .rotate( [71.057,0] )
     .center( [0, 42.313] )
     .translate( [width/2,height/2] );
@@ -51,13 +51,13 @@ var projectionConicEq = d3.geo.conicEquidistant()
 
 // Orthographic
 var projectionOrtho = d3.geo.orthographic()
-    .scale( 5000 )
+    .scale( 1000 )
     .rotate( [71.057,0] )
     .center( [0, 42.313] )
     .translate( [width/2,height/2] );
 
 var path = d3.geo.path()
-    .projection(projectionOrtho);
+    .projection(projectionAlbers);
 
 var graticule = d3.geo.graticule();
 
